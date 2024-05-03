@@ -15,6 +15,8 @@ The Book Collection API is a RESTful web service built with Flask and SQLAlchemy
 - **POST /mysite/books**: Add a new book to the collection.
 - **PUT /mysite/books/<book_id>**: Update details of a specific book by ID.
 - **DELETE /mysite/books/<book_id>**: Delete a book from the collection by ID.
+- **GET /mysite/genres/<genre_id>/books**: Retrieve all books of a specific genre.
+- **GET /mysite/authors/<author_id>/books**: Retrieve all books of a specific author.
 
 ## Authors
 - Jordan Williams: [jordanlw1997@gmail.com](mailto:jordanlw1997@gmail.com)
