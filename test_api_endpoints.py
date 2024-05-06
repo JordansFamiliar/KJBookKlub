@@ -9,3 +9,7 @@ class TestAPIEndpoints(unittest.TestCase):
 
     def tearDown(self):
         pass
+
+    def test_get_all_books(self):
+        response = self.app.get('/mysite/books')
+        self.assertEqual(response.status_code, 200)
