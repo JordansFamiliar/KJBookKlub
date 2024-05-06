@@ -18,6 +18,39 @@ The Book Collection API is a RESTful web service built with Flask and SQLAlchemy
 - **GET /mysite/genres/<genre_id>/books**: Retrieve all books of a specific genre.
 - **GET /mysite/authors/<author_id>/books**: Retrieve all books of a specific author.
 
+## Setup
+Ensure that the following prerequisites are installed on your system:
+- **Python (version 3.7 or higher)**
+- **pip (Python package manager)**
+- **SQLite (lightweight relational database)**
+
+### Installation Steps
+**1. Clone this repository:**
+git clone https://github.com/JordansFamiliar/KJBookKlub.git
+cd KJBookKlub
+
+**2. Create a virtual environment:**
+python -m venv venv
+
+**3. Activate virtual environment:**
+(On Windows) venv\Scripts\activate
+(On macOS and Linux) source venv/bin/activate
+
+**4. Install dependencies:**
+pip install -r requirements.txt
+
+**5. Initialise database:**
+flask db init
+flask db migrate -m "Initial migration"
+flask db upgrade
+
+**6. Run the application**
+flask run
+
+**7. Access API**
+Api can be accessed via your web browser or by using curl or fetch.
+
+
 ## Authors
 - Jordan Williams: [jordanlw1997@gmail.com](mailto:jordanlw1997@gmail.com)
 - Keitumetse Molefe: [kr.molefe98@gmail.com](mailto:kr.molefe98@gmail.com)
