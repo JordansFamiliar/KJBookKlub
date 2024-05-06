@@ -3,6 +3,10 @@ import json
 from app import app, db, Book, Author, Genre
 
 class TestAPIEndpoints(unittest.TestCase):
+    """
+    Unit tests for API endpoints.
+    """
+
     def setUp(self):
         self.app = app.test_client()
         self.app.testing = True
