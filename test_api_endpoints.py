@@ -19,3 +19,16 @@ class TestAPIEndpoints(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
 
+    def test_add_book(self):
+        data = {
+            'title': 'Test Book',
+            'publication_date': '2022-01-01',
+            'isbn': '1234567890',
+            'author_name': 'Test Author',
+            'genre_name': 'Test Genre',
+            'cover_image': 'http://example.com/cover_image.jpg'
+        }
+        response = self.app.post('/mysite/books', json=data)
+        self.assertEqual(response.status_code, 201)
+
+
