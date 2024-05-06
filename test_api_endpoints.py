@@ -18,7 +18,6 @@ class TestAPIEndpoints(unittest.TestCase):
         response = self.app.get('/mysite/books/1')
         self.assertEqual(response.status_code, 200)
 
-
     def test_add_book(self):
         data = {
             'title': 'Test Book',
@@ -31,4 +30,8 @@ class TestAPIEndpoints(unittest.TestCase):
         response = self.app.post('/mysite/books', json=data)
         self.assertEqual(response.status_code, 201)
 
+    def test_update_book(self):
+        data = {'title': 'Updated Title'}
+        response = self.app.put('/mysite/books/1', json=data)
+        self.assertEqual(response.status_code, 200)
 
