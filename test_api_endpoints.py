@@ -62,6 +62,9 @@ class TestAPIEndpoints(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_get_books_by_genre_id(self):
+        """
+        Test the GET /mysite/genres/<genre_id>/books endpoint to retrieve all books of a specific genre.
+        """
         response = self.app.get('/mysite/genres/1/books')
         self.assertEqual(response.status_code, 200)
 
