@@ -18,6 +18,9 @@ class TestAPIEndpoints(unittest.TestCase):
         pass
 
     def test_get_all_books(self):
+        """
+        Test the GET /mysite/books endpoint to retrieve all books in the collection.
+        """
         response = self.app.get('/mysite/books')
         self.assertEqual(response.status_code, 200)
 
