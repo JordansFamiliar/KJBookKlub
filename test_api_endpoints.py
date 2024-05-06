@@ -35,3 +35,7 @@ class TestAPIEndpoints(unittest.TestCase):
         response = self.app.put('/mysite/books/1', json=data)
         self.assertEqual(response.status_code, 200)
 
+    def test_delete_book(self):
+        response = self.app.delete('/mysite/books/1')
+        self.assertEqual(response.status_code, 200)
+
