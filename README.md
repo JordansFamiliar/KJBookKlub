@@ -50,6 +50,33 @@ flask run
 **7. Access API**
 Api can be accessed via your web browser or by using curl or fetch.
 
+Examples using curl:
+
+curl -X GET https://KJBookKlub.pythonanywhere.com/mysite/books
+
+curl -X GET https://KJBookKlub.pythonanywhere.com/mysite/books/<book_id>
+
+curl -X POST \
+  https://KJBookKlub.pythonanywhere.com/mysite/books \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "title": "Test Book",
+    "publication_date": "February 10, 2019",
+    "isbn": "0123456789101",
+    "author_name": "Test Name",
+    "genre_name": "Test Genre",
+    "cover_image": "https://example.com/cover_image_url"
+  }'
+
+curl -X PUT \
+  https://KJBookKlub.pythonanywhere.com/mysite/books/<book_id> \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "title": "Test Book Update"
+  }'
+
+curl -X DELETE https://KJBookKlub.pythonanywhere.com/mysite/books/<book_id>
+
 
 ## Authors
 - Jordan Williams: [jordanlw1997@gmail.com](mailto:jordanlw1997@gmail.com)
