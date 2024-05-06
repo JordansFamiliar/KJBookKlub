@@ -25,6 +25,9 @@ class TestAPIEndpoints(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_get_book_by_id(self):
+        """
+        Test the GET /mysite/books/<book_id> endpoint to retrieve details of a specific book by ID.
+        """
         response = self.app.get('/mysite/books/1')
         self.assertEqual(response.status_code, 200)
 
