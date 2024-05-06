@@ -47,3 +47,5 @@ class TestAPIEndpoints(unittest.TestCase):
         response = self.app.get('/mysite/authors/1/books')
         self.assertEqual(response.status_code, 200)
 
+if __name__ == '__main__':
+    unittest.main()
