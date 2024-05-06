@@ -8,6 +8,9 @@ class TestAPIEndpoints(unittest.TestCase):
     """
 
     def setUp(self):
+        """
+        Test for the setup of the app.
+        """
         self.app = app.test_client()
         self.app.testing = True
 
