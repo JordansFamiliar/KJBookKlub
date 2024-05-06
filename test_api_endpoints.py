@@ -43,3 +43,7 @@ class TestAPIEndpoints(unittest.TestCase):
         response = self.app.get('/mysite/genres/1/books')
         self.assertEqual(response.status_code, 200)
 
+    def test_get_books_by_author_id(self):
+        response = self.app.get('/mysite/authors/1/books')
+        self.assertEqual(response.status_code, 200)
+
