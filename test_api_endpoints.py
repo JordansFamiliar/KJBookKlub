@@ -32,6 +32,9 @@ class TestAPIEndpoints(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_add_book(self):
+        """
+        Test the POST /mysite/books endpoint to add a new book to the collection.
+        """
         data = {
             'title': 'Test Book',
             'publication_date': '2022-01-01',
