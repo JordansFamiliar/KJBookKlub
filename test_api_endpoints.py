@@ -55,6 +55,9 @@ class TestAPIEndpoints(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_delete_book(self):
+        """
+        Test the DELETE /mysite/books/<book_id> endpoint to delete a book from the collection by ID.
+        """
         response = self.app.delete('/mysite/books/1')
         self.assertEqual(response.status_code, 200)
 
