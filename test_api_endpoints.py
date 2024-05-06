@@ -47,6 +47,9 @@ class TestAPIEndpoints(unittest.TestCase):
         self.assertEqual(response.status_code, 201)
 
     def test_update_book(self):
+        """
+        Test the PUT /mysite/books/<book_id> endpoint to update details of a specific book by ID.
+        """
         data = {'title': 'Updated Title'}
         response = self.app.put('/mysite/books/1', json=data)
         self.assertEqual(response.status_code, 200)
